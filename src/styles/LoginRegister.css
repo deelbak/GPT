@@ -1,0 +1,279 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff 0%, #d6d4d4 100%);
+  padding: 20px;
+}
+
+.auth-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.auth-box h2 {
+  color: #2d3748;
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.auth-container .auth-box .auth-input,
+.auth-container .auth-box select.auth-input {
+  width: 100%;
+  padding: 15px 45px 15px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: white;
+  color: #7a7a7a;
+  box-sizing: border-box;
+}
+
+.auth-container .auth-box .input-group {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.auth-container .auth-box .gender-group {
+  width: 100%;
+  margin-right: 0;
+}
+
+.auth-input:focus,
+select.auth-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: none;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #b87a08 0%, #7739b6 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.auth-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+}
+
+.error-message {
+  background: #fed7d7;
+  color: #c53030;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.auth-footer {
+  margin-top: 25px;
+  color: #4a5568;
+  font-size: 14px;
+}
+
+.auth-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.auth-link:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 100;
+    
+    transform: translateY(0);
+  }
+}
+
+.auth-box {
+  animation: fadeIn 0.5s ease-out;
+}
+
+input[type="date"].auth-input {
+  cursor: pointer;
+}
+
+input[type="date"].auth-input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  width: 20px;
+  height: 20px;
+}
+
+.input-group + .input-group {
+  margin-top: 15px;
+}
+
+.form-divider {
+  height: 20px; /* Space after email field */
+}
+
+.date-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  color: #4a5568;
+  font-size: 0.9rem;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.gender-group {
+  width: 100%;
+  margin-right: 0;
+}
+
+select.auth-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  background: white;
+  width: 100%;
+  padding-right: 30px;
+}
+
+.success-message {
+  background: #c6f6d5;
+  color: #2f855a;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reset-password {
+  margin-top: -10px;
+  color: #4a5568;
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 25px;
+  margin-left: 10px;
+}
+
+/* Add these new styles for the confirmation message */
+.confirmation-box {
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.confirmation-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.confirmation-text {
+  color: #2d3748;
+  font-size: 16px;
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+.confirmation-text strong {
+  display: block;
+  color: #4a5568;
+  margin-top: 8px;
+}
+
+.confirmation-subtext {
+  color: #718096;
+  font-size: 14px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.auth-button.secondary {
+  background: #718096;
+  margin-bottom: 15px;
+}
+
+.auth-button.secondary:hover {
+  background: #4a5568;
+}
+
+/* Animation classes */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.confirmation-box {
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Добавляем отступ между чекбоксом и текстом */
+input[type="checkbox"] {
+  margin-right: 8px; /* Отступ справа от чекбокса */
+}
+
+/* Или если нужен отступ после всего элемента с чекбоксом */
+.checkbox-group {
+  margin-bottom: 15px; /* Отступ снизу всей группы */
+}
+
+/* Если чекбокс находится внутри label */
+label input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Или более специфичный селектор для вашего случая */
+.auth-container .auth-box input[type="checkbox"] {
+  margin-right: 8px;
+} 
